@@ -85,6 +85,7 @@ outputConfig() {
   echo "NOTED_TIMESTAMP_FORMAT=${NOTED_TIMESTAMP_FORMAT}"
   echo "NOTED_TEMPLATE_FILE=${NOTED_TEMPLATE_FILE:-<<DEFAULT>>}"
   echo "NOTED_TODO_MARKER=${NOTED_TODO_MARKER}"
+  echo "NOTED_DEFAULT_EDITOR=${NOTED_DEFAULT_EDITOR}"
 }
 
 validate() {
@@ -99,7 +100,7 @@ version() {
 }
 
 view() {
-  nano "${htmlFile}"
+  "${NOTED_DEFAULT_EDITOR}" "${htmlFile}"
 }
 
 #
@@ -122,8 +123,9 @@ NOTED_FILE_NAME_DATE_FORMAT="+%Y-%m-%d"
 NOTED_TIMESTAMP_FORMAT="+%H:%M:%S UTC"
 NOTED_TEMPLATE_FILE=""
 # keep the directory where notes are stored here
-NOTED_MARKDOWN_HOME=$HOME/Documents/notes
+NOTED_MARKDOWN_HOME=/home/$USER/Documents/notes
 NOTED_TODO_MARKER="TODO"
+NOTED_DEFAULT_EDITOR=nano
 
 #
 # Override with any additional settings
