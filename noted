@@ -61,7 +61,7 @@ EOF
 }
 
 edit() {
-  open "${markdownFile}"
+  "${NOTED_DEFAULT_EDITOR}" "${markdownFile}"
 }
 
 loadProperties() {
