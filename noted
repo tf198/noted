@@ -127,7 +127,7 @@ NOTED_TEMPLATE_FILE=""
 NOTED_MARKDOWN_HOME=/home/$USER/Documents/notes
 NOTED_TODO_MARKER="TODO"
 NOTED_DEFAULT_EDITOR=nano
-NOTED_DEFAULT_EDITOR=firefox
+NOTED_DEFAULT_VIEWER=firefox
 
 #
 # Override with any additional settings
