@@ -113,7 +113,7 @@ VERSION="0.0.3"
 #
 # Settings that cannot be overridden
 # Location of config file
-CONFIG_FILE=$HOME/.notedconfig
+CONFIG_FILE=/home/$USER/.notedconfig
 
 # Settings that can be overridden from properties
 # name files like this
