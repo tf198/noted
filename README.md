@@ -2,7 +2,7 @@
 
 # noted
 
-_Lightweight CLI for taking markdown notes in a journal-like (time-seried) fashion on macOS._
+_Lightweight CLI for taking markdown notes in a journal-like (time-seried) fashion on GNU/Linux._
 
 ## Contents
 
@@ -47,13 +47,13 @@ A good standard way to do this is to symlink the `noted` script to `/usr/local/b
 2. Clone this repository to your Documents folder.
 
 ```shell
-git -C $HOME/Documents clone git@github.com:scottashipp/noted.git
+git -C /home/$USER/Documents clone git@github.com:scottashipp/noted.git
 ```
 
 3. Symlink the file:
 
 ```shell
-ln -s $HOME/Documents/noted/noted /usr/local/bin/noted
+ln -s /home/$USER/Documents/noted/noted /usr/local/bin/noted
 ```
 
 4. Verify that it is visible on the path:
