@@ -47,7 +47,7 @@ A good standard way to do this is to symlink the `noted` script to `/usr/local/b
 2. Clone this repository to your Documents folder.
 
 ```shell
-git -C /home/$USER/Documents clone git@github.com:scottashipp/noted.git
+git -C /home/$USER/Documents clone git@github.com:davej453/noted.git
 ```
 
 3. Symlink the file:
