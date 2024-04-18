@@ -99,7 +99,7 @@ version() {
 }
 
 view() {
-  open "${htmlFile}"
+  nano "${htmlFile}"
 }
 
 #
