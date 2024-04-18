@@ -149,7 +149,7 @@ The following default values are configured.
 
 | Property | Description | Default Value |
 | :-- | :-- | :-- |
-| NOTED_MARKDOWN_HOME | The place where markdown files are automatically generated. | `$HOME/Documents/noted` |
+| NOTED_MARKDOWN_HOME | The place where markdown files are automatically generated. | `/home/$USER/Documents/noted` |
 | NOTED_FILE_NAME_DATE_FORMAT | The date format string used as the file name for new notes. | `"+%Y-%m-%d"` | 
 | NOTED_TIMESTAMP_FORMAT | The timestamp format for the timestamp placed on new entries. | `"+%H:%M:%S UTC"` |
 | NOTED_TEMPLATE_FILE | A file containing a Markdown-formatted entry template to use. | `""` <br /> (It is empty by default. Which means the script's own default template will be used.) |
