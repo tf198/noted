@@ -159,17 +159,17 @@ The following default values are configured.
 
 To configure custom values, you may place a `.notedconfig` file in your `$HOME` directory.
 
-For example, saving the following contents into `$HOME/.notedconfig` will alter the behavior of `noted` accordingly:
+For example, saving the following contents into `/home/$USER/.notedconfig` will alter the behavior of `noted` accordingly:
 
 ```text
 # Save my notes here instead
-NOTED_MARKDOWN_HOME=$HOME/Documents/mynotes
+NOTED_MARKDOWN_HOME=/home/$USER/Documents/mynotes
 # Use month-date-year instead of year-month-date as the file names
 NOTED_FILE_NAME_DATE_FORMAT="+%m-%d-%Y"
 # Use Pacific time
 NOTED_TIMESTAMP_FORMAT="+%H:%M:%S Pacific"
 # Use my own template file
-NOTED_TEMPLATE_FILE=$HOME/Documents/mynotes/template.md
+NOTED_TEMPLATE_FILE=/home/$USER/Documents/mynotes/template.md
 NOTED_TODO_MARKER="REMINDER:"
 ```
 
@@ -223,17 +223,6 @@ Some people may prefer to use `noted` with a static site generator like [mkdocs]
 view your notes in HTML format locally.
 
 ## Change default editor
-`noted` used `open` command to edit a markdown file. Usually `open` command is an alias and can be changed using the following commands.
+`noted` used `nano` command to edit a markdown file.
 
-
-Add a new alternative to `open` command:
-
-```
-sudo update-alternatives --install /usr/bin/open open <path> <priority>
-```
-
-Choose the new alternative
-
-```
-sudo update-alternatives --config open
 ```
