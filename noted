@@ -86,6 +86,7 @@ outputConfig() {
   echo "NOTED_TEMPLATE_FILE=${NOTED_TEMPLATE_FILE:-<<DEFAULT>>}"
   echo "NOTED_TODO_MARKER=${NOTED_TODO_MARKER}"
   echo "NOTED_DEFAULT_EDITOR=${NOTED_DEFAULT_EDITOR}"
+  echo "NOTED_DEFAULT_VIEWER=${NOTED_DEFAULT_VIEWER}"
 }
 
 validate() {
@@ -100,7 +101,7 @@ version() {
 }
 
 view() {
-  "${NOTED_DEFAULT_EDITOR}" "${htmlFile}"
+  "${NOTED_DEFAULT_VIEWER}" "${htmlFile}"
 }
 
 #
@@ -126,6 +127,7 @@ NOTED_TEMPLATE_FILE=""
 NOTED_MARKDOWN_HOME=/home/$USER/Documents/notes
 NOTED_TODO_MARKER="TODO"
 NOTED_DEFAULT_EDITOR=nano
+NOTED_DEFAULT_EDITOR=firefox
 
 #
 # Override with any additional settings
