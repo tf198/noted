@@ -80,6 +80,7 @@ ngrep() {
 
 outputConfig() {
   echo "The following configuration is currently being used:"
+  echo "NOTED_CONFIG=${CONFIG_FILE}"
   echo "NOTED_MARKDOWN_HOME=${NOTED_MARKDOWN_HOME}"
   echo "NOTED_FILE_NAME_DATE_FORMAT=${NOTED_FILE_NAME_DATE_FORMAT}"
   echo "NOTED_TIMESTAMP_FORMAT=${NOTED_TIMESTAMP_FORMAT}"
@@ -115,7 +116,7 @@ VERSION="0.0.3"
 #
 # Settings that cannot be overridden
 # Location of config file
-CONFIG_FILE=/home/$USER/.notedconfig
+CONFIG_FILE=${NOTED_CONFIG:-${HOME}/.config/noted}
 
 # Settings that can be overridden from properties
 # name files like this
@@ -124,9 +125,9 @@ NOTED_FILE_NAME_DATE_FORMAT="+%Y-%m-%d"
 NOTED_TIMESTAMP_FORMAT="+%H:%M:%S UTC"
 NOTED_TEMPLATE_FILE=""
 # keep the directory where notes are stored here
-NOTED_MARKDOWN_HOME=/home/$USER/Documents/notes
+NOTED_MARKDOWN_HOME=/${HOME}/Documents/notes
 NOTED_TODO_MARKER="TODO"
-NOTED_DEFAULT_EDITOR=nano
+NOTED_DEFAULT_EDITOR=${EDITOR:-nano}
 NOTED_DEFAULT_VIEWER=firefox
 
 #
