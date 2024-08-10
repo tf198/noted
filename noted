@@ -156,7 +156,7 @@ elif [[ "${subcommand}" == "grep" ]]; then
   shift
   ngrep "$@"
 elif [[ "${subcommand}" == 'todos' ]]; then
-  fgrep -rH "${NOTED_TODO_MARKER}" "${NOTED_MARKDOWN_HOME}" | fgrep -v ~~
+  grep -rFH "${NOTED_TODO_MARKER}" "${NOTED_MARKDOWN_HOME}" | grep -Fv ~~
   if [ 1 == $? ]; then echo "Congratulations! No TODOs found!"; fi
   echo
 else
